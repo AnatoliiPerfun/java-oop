@@ -16,9 +16,9 @@ public class Main {
 
         newJuniorEmployee.raiseSalary();
         newLeadEmployee.raiseSalary();
-        System.out.println(newJuniorEmployee.salary);
-        System.out.println(newLeadEmployee.salary);
-        newJuniorEmployee.checkGrade();
+        System.out.println(newJuniorEmployee.getSalary());
+        System.out.println(newLeadEmployee.getSalary());
+        System.out.println(newJuniorEmployee);
         newLeadEmployee.checkGrade();
     }
 }
