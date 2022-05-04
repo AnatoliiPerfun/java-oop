@@ -20,5 +20,16 @@ public class Main {
         System.out.println(newLeadEmployee.getSalary());
         System.out.println(newJuniorEmployee);
         newLeadEmployee.checkGrade();
+        money();
+    }
+
+    private static void money() {
+        EmployeeAcc employeeAcc = new EmployeeAcc("Joe", 10000);
+
+        employeeAcc.withdraw(500);
+        employeeAcc.deposit(5000);
+
+        System.out.println(employeeAcc.getOwner());
+        System.out.println(employeeAcc.getBalance());
     }
 }
