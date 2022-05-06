@@ -1,17 +1,7 @@
-import java.sql.Timestamp;
-
-public class PassChangeEvent implements Event {
-    private final Long createTimestamp;
-    private final String id;
+public class PassChangeEvent extends AbstractEvent {
 
     public PassChangeEvent(String id) {
-        this.id = id;
-        this.createTimestamp = new Timestamp(System.
-                currentTimeMillis()).getTime();
-    }
-    @Override
-    public Long getTimeStamp() {
-        return this.createTimestamp;
+        super(id);
     }
     @Override
     public void process() {
