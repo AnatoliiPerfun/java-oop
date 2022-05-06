@@ -1,5 +1,23 @@
+import java.util.Iterator;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
+
+        PassChangeEvent eventOne = new PassChangeEvent(("123456"));
+        PassChangeEvent eventTwo = new PassChangeEvent(("7890"));
+
+        Event[] events = {eventOne, eventTwo};
+        for (Event e : events) {
+            System.out.println(e.getTimeStamp());
+            e.process();
+            System.out.println();
+        }
+
+
+       /* DigitsReader digitsReader = new DigitsReader ("message.txt");
+        System.out.println(digitsReader.readFile());
+        System.out.println(digitsReader.getPath());
+
         ModArrayList<Integer> mList = new ModArrayList<>();
         mList.add(0);
         mList.add(10);
@@ -16,6 +34,6 @@ public class Main {
 
         System.out.println(contactOne);
         System.out.println(contactTwo);
-        System.out.println(contactThree);
+        System.out.println(contactThree); */
     }
 }
