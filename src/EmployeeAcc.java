@@ -1,5 +1,5 @@
 public class EmployeeAcc {
-    private String owner;
+    private final String owner;
     private double balance;
 
     public EmployeeAcc(String owner, double startBalance) {
@@ -14,18 +14,14 @@ public class EmployeeAcc {
         return balance;
     }
 
-    public double deposit(double amt) {
+    public void deposit(double amt) {
         if (amt > 0) {
             this.balance = this.balance + amt;
-            return amt;
         }
-        return 0;
     }
-    public double withdraw(double amt) {
+    public void withdraw(double amt) {
         if (amt <= this.balance) {
-            this.balance = this.balance = amt;
-            return amt;
+            this.balance = amt;
         }
-        return 0;
     }
 }

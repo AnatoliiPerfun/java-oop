@@ -1,35 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        Employee newJuniorEmployee = new Employee(
-                        "Joe",
-                        "Kiev",
-                        3000,
-                        25,
-                        Grade.JUNIOR);
+        ModArrayList<Integer> mList = new ModArrayList<>();
+        mList.add(0);
+        mList.add(10);
+        mList.add(20);
+        mList.add(30);
 
-        Employee newLeadEmployee = new Employee(
-                "Todd",
-                "Kiev",
-                5000,
-                30,
-                Grade.LEAD);
+        System.out.println(mList.getUsingMod(1));
+        System.out.println(mList.getUsingMod(-2));
+        System.out.println(mList.getUsingMod(40));
 
-        newJuniorEmployee.raiseSalary();
-        newLeadEmployee.raiseSalary();
-        System.out.println(newJuniorEmployee.getSalary());
-        System.out.println(newLeadEmployee.getSalary());
-        System.out.println(newJuniorEmployee);
-        newLeadEmployee.checkGrade();
-        money();
-    }
+        Contact contactOne = new Contact("Sam", new PhoneNumber("32459230958"));
+        Contact contactTwo = new Contact("Dean", "deanw@supernatural.com");
+        Contact contactThree = new Contact("Sarah", new PhoneNumber(380, "32459230958"));
 
-    private static void money() {
-        EmployeeAcc employeeAcc = new EmployeeAcc("Joe", 10000);
-
-        employeeAcc.withdraw(500);
-        employeeAcc.deposit(5000);
-
-        System.out.println(employeeAcc.getOwner());
-        System.out.println(employeeAcc.getBalance());
+        System.out.println(contactOne);
+        System.out.println(contactTwo);
+        System.out.println(contactThree);
     }
 }

@@ -3,5 +3,6 @@ public enum Grade {
     MIDDLE,
     SENIOR,
     LEAD,
-    MANAGER
+    MANAGER,
+    SALES
 }
